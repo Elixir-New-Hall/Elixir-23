@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    position: relative;
+}
+
+#newHall {
+    width: 60%;
+    height: 60%;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+path {
+    fill-opacity: 1;
+    stroke: #dc2f02;
+    fill: #ffba08;
+    stroke-width: 30;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 86000;
+
+    animation: animate 4s ease-in;
+}
+
+
+
+@keyframes animate {
+    0% {
+        stroke-dashoffset: 84000;
+        fill: none;
+        stroke: #03071e;
+    }
+    5%{
+        stroke: #370617;
+    }
+    10%{
+        stroke: #6a040f;
+    }
+    20%{
+        fill-opacity: .01;
+        stroke: #9d0208;
+    }
+    30%{
+        fill-opacity: .02;
+        stroke: #d00000;
+    }
+    40%{
+        fill-opacity: .04;
+        stroke: #dc2f02;
+        fill: #dc2f02;
+    }
+    50%{
+        fill-opacity: .05;
+        fill: #e85d04;
+    }
+    75%{
+        fill-opacity: .1;
+        opacity: .8;
+        stroke: #e85d04;
+        fill: #f48c06;
+    }
+    90%{
+        fill-opacity: .2;
+        opacity: 1;
+        stroke: #e85d04;
+        fill: #faa307;
+    }
+    95%{
+        fill-opacity: .5;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        fill: #faa307;
+        fill-opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes scale-up {
+    from {
+        scale: 1.0
+    }
+
+    to {
+        scale: 1.2
+    }
+}
