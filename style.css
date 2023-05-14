@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,800,900&display=swap");
 
 *,
 ::after,
@@ -242,7 +243,7 @@ nav {
   margin: 0 0.7vw;
   color: #ffffff;
   font-family: 'Tilt Prism', cursive;
-
+  font-weight: 600;
 }
 
 .nav-links li a:hover {
@@ -512,6 +513,84 @@ nav {
 
 /* HERO SECTION ENDS  */
 
+/* COUNTDOWN SECTION STARTS  */
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  color: aliceblue;
+}
+
+.countdown-container .heading{
+  font-family: 'Tilt Prism', cursive;
+  color: white;
+  text-shadow: 3px 4px 2px #000000;
+  font-size: 30px;
+  font: bold;
+  text-align: center;
+}
+
+.countdown-container::before{
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-image: url("./img/countdown-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  /* filter: blur(0px); */
+  overflow: hidden;
+  text-align: center;
+  z-index: -5;
+  filter: blur(3px);
+}
+
+
+.item {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Silkscreen", cursive;
+  border: 2px solid white;
+  padding: 1.2rem 0;
+  backdrop-filter: blur(8px);
+  border-radius: 5px;
+}
+
+.item .count_down {
+  font-size: 40px;
+  font-family: "Permanent Marker", cursive;
+}
+
+@media only screen and (max-width: 425px) {
+  .countdown-section{
+    margin-top: -2rem;
+  }
+
+  .item{
+    padding: 0.2rem 3rem;
+  }
+}
+
+/* COUNTDOWN SECTION ENDS  */
+
+
 /* ABOUT SECTION STARTS  */
 
 .about-section {
@@ -547,11 +626,18 @@ nav {
 
 .container {
   background: #fff;
-  max-width: 70vw;
+  max-width: 80vw;
   height: 80vh;
   margin: auto;
   transform: translateY(15%);
   box-shadow: 0px 0px 6px 0px #22222273;
+}
+
+.brochure-link,
+.brochure-link:active,
+.brochure-link:hover{
+  text-decoration: none;
+  color: #222;  
 }
 
 .container .circles {
@@ -572,7 +658,7 @@ nav {
   border-radius: 50%;
 }
 
-.container .circles:after {
+/* .container .circles:after {
   content: "";
   position: absolute;
   right: -11%;
@@ -581,7 +667,7 @@ nav {
   height: 200px;
   background: #fddb33;
   border-radius: 50%;
-}
+} */
 
 .container .details-container {
   position: relative;
@@ -703,11 +789,12 @@ nav {
   }
 
   .about-section::before {
-    height: 130vh;
+    height: 158vh;
   }
 
   .about-section {
-    margin-top: -0.6rem;
+    /* margin-top: -0.6rem; */
+    height: max-content;
   }
 }
 
@@ -818,6 +905,147 @@ nav {
 }
 
 /* GALLERY SECTION ENDS  */
+
+/* PORTFOLIO SECTION STARTS */
+
+.portfolio-header{
+  font-family: 'Tilt Prism', cursive;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 5.5vmax;
+  height: 20vh;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+
+.portfolio-section {
+  height: 80vh;
+  position: relative;
+  /* padding-top: 40px;
+  padding-bottom: 40px; */
+  background-color: #000000;
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  /* height: max-content; */
+}
+
+.our-team {
+  padding: 30px 0 40px;
+  background: #f9f9f9;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-bottom: 5px solid #00325a;
+}
+.our-team:hover{
+  border-bottom: 5px solid #2f2f2f;
+}
+
+.our-team .pic{
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+.our-team .pic:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #00325a;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+.our-team:hover .pic:before{
+height: 100%;
+  background: #2f2f2f; 
+}
+.our-team .pic:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #ffffff00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s linear 0s;
+}
+.our-team:hover .pic:after{
+  background: #7ab92d;
+}
+.our-team .pic img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+  position: relative;
+  z-index: 2;
+}
+.our-team:hover .pic img{
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+.our-team .team-content{ margin-bottom: 30px; }
+.our-team .title{
+  font-size: 22px;
+  font-weight: 700;
+  color: #4e5052;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.our-team .post{
+  display: block;
+  font-size: 15px;
+  color: #4e5052;
+  text-transform:capitalize;
+}
+.our-team .social{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #2f2f2f;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+.our-team:hover .social{ bottom: 0; }
+.our-team .social li{ display: inline-block; }
+.our-team .social li a{
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+.our-team .social li a:hover{
+  color: #2f2f2f;
+  background: #f7f5ec;
+}
+@media only screen and (max-width: 990px){
+  .our-team{ margin-bottom: 30px; }
+  .portfolio-section{
+    height: max-content;
+  }
+}
+
+/* PORTFOLIO SECTION ENDS */
 
 
 /* CONTACT SECTION STARTS */
