@@ -7,43 +7,43 @@
         let data = [
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=211',
+                src: '../img/pota.jpeg',
                 date: '2015',
                 content: 'POTA AR MORUDYAN',
             },
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=2012',
+                src: '../img/gallery_1.jpg',
                 date: '2016',
                 content: 'ANUPAM ROY',
             },
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=2011',
+                src: '../img/na-layak.jpeg',
                 date: '2017',
                 content: 'SPUNK & NALAYAK',
             },
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=2010',
+                src: '../img/shilajit.jpeg',
                 date: '2018',
                 content: 'SHILAJIT',
             },
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=209',
+                src: '../img/prithbi.jpeg',
                 date: '2019',
                 content: 'PRITHIBI',
             },
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=207',
+                src: '../img/Anupamroy.jpeg',
                 date: '2022',
                 content: 'ANUPAM ROY',
             },
             {
                 url: 'javascript:;',
-                src: 'https://picsum.photos/300/200?random=207',
+                src: '../img/qustion.jpeg',
                 date: '2023',
                 content: 'COMING SOON',
             }
